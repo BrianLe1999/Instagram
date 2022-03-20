@@ -1,4 +1,4 @@
 .gitignore
 Instagram/API_KEYS/
-Instagram/Instagram/apiKeys.swift
+apiKeys.swift
 
