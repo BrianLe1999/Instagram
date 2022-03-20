@@ -14,6 +14,7 @@
 		8BD7244C27E6FB1A00E0D357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD7244A27E6FB1A00E0D357 /* Main.storyboard */; };
 		8BD7244E27E6FB1B00E0D357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD7244D27E6FB1B00E0D357 /* Assets.xcassets */; };
 		8BD7245127E6FB1B00E0D357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD7244F27E6FB1B00E0D357 /* LaunchScreen.storyboard */; };
+		8BD7246327E7086F00E0D357 /* apiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD7246227E7086F00E0D357 /* apiKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8BD7244D27E6FB1B00E0D357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BD7245027E6FB1B00E0D357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BD7245227E6FB1B00E0D357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD7246227E7086F00E0D357 /* apiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiKeys.swift; sourceTree = SOURCE_ROOT; };
 		AE10D307C74F85AEA27CF51D /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 		8BD7245B27E7057B00E0D357 /* API_KEYS */ = {
 			isa = PBXGroup;
 			children = (
+				8BD7246227E7086F00E0D357 /* apiKeys.swift */,
 			);
 			path = API_KEYS;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			files = (
 				8BD7244927E6FB1A00E0D357 /* ViewController.swift in Sources */,
 				8BD7244527E6FB1A00E0D357 /* AppDelegate.swift in Sources */,
+				8BD7246327E7086F00E0D357 /* apiKeys.swift in Sources */,
 				8BD7244727E6FB1A00E0D357 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
