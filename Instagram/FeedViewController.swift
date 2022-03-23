@@ -11,7 +11,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     var posts = [PFObject]()
-
+    private var numPosts = 20
+    let myRefreshControl = UIRefreshControl()
 
     @IBOutlet weak var postTableView: UITableView!
     override func viewDidLoad() {
@@ -21,6 +22,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         // Do any additional setup after loading the view.
         self.postTableView.separatorColor = UIColor.clear
+        myRefreshControl.addTarget(self, action: #selector(loadPosts), for: .valueChanged)
+        postTableView.refreshControl = myRefreshControl
     }
     
 
@@ -29,16 +32,24 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         loadPosts()
     }
     
-    private func loadPosts() {
+    @objc private func loadPosts() {
+        print("load posts")
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
-        query.limit = 20
+        query.limit = numPosts
         query.findObjectsInBackground { posts, error in
             if posts != nil {
                 self.posts = posts!
                 self.postTableView.reloadData()
+                self.myRefreshControl.endRefreshing()
             }
         }
+    }
+    
+    private func loadMorePosts() {
+        print("load more posts")
+        numPosts += 20
+        loadPosts()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -50,13 +61,19 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let user = post["author"] as! PFUser
         
         cell.usernameLabel.text = user.username
-        cell.captionLabel.text = post["caption"] as! String
+        cell.captionLabel.text = post["caption"] as? String
         
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)
-        cell.photoImageVIew.af_setImage(withURL: url!)
+        cell.photoImageVIew.af.setImage(withURL: url!)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == posts.count {
+            loadMorePosts()
+        }
     }
 
 }
