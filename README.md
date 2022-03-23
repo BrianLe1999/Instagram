@@ -23,4 +23,5 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://gfycat.com/lavishwellworncoqui' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://thumbs.gfycat.com/LavishWellwornCoqui-size_restricted.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
