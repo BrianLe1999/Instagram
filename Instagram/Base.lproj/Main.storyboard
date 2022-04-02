@@ -367,6 +367,7 @@
                     <connections>
                         <outlet property="nameLabel" destination="34Q-Qd-w6m" id="AHy-Ep-dCZ"/>
                         <outlet property="profileImageView" destination="NrB-Su-pgK" id="KEq-UR-OqL"/>
+                        <segue destination="sRA-29-8fP" kind="show" identifier="feedSeque" id="Sug-BW-F7r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHY-Qg-yUw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -417,6 +418,9 @@
             <point key="canvasLocation" x="1392.753623188406" y="1374.7767857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Sug-BW-F7r"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="feed_tab" width="25" height="25"/>
         <image name="image_placeholder" width="375" height="375"/>
